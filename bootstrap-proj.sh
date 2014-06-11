@@ -9,12 +9,10 @@ REPOS=${ROOT}/src
 # Bootstrap a new session called "proj"
 tmux new-session     -d -s proj
 
-
 # Rename the first window (using the session-name:id notation)
 tmux rename-window      -t proj:0 "dev"
 
-
-# Create and label three other windows, splitting the last one horizontally
+# Create and label three other windows
 tmux new-window         -t proj:1 -n "server"
 tmux new-window         -t proj:2 -n "console"
 tmux new-window         -t proj:3 -n "git"
@@ -22,21 +20,23 @@ tmux new-window         -t proj:3 -n "git"
 
 # Send commands to the windows, use "C-m" to emulate "enter"
 
-# On window 1, Start the virtualenv and run Rails app server of choice.
+# start teh vim!!1!
+tmux send-keys          -t proj:0 "cd ${REPOS}" C-m
+tmux send-keys          -t proj:0 "vim" C-m
+
+# On window 1, load env via RVM and start Rails app server of choice.
 tmux send-keys          -t proj:1 "cd ${REPOS}" C-m
 tmux send-keys          -t proj:1 "rails s" C-m
 
-# On window 2, move to the directory with the source code for the client, and start Vim
+# On window 2, load env via RVM and start Rails app interactive console
 tmux send-keys          -t proj:1 "cd ${REPOS}" C-m
 tmux send-keys          -t proj:2 "rails c" C-m
 
-# On window 3 setup Git. On the left launch an alias to watch the current tree, while...
+# Window 3 is dedicated to git.
 #tmux send-keys          -t proj:3.left "cd ${REPOS}" C-m
 #tmux send-keys          -t proj:3.left "git watchtree" C-m
-# on the right keep a shell to interact with Git
 tmux send-keys          -t proj:3 "cd ${REPOS}" C-m
 tmux send-keys          -t proj:3 "git status" C-m
-
 
 # Switch to window 0
 tmux select-window -t proj:0
