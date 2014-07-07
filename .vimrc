@@ -26,6 +26,7 @@ Plugin 'tpope/vim-bundler'
 
 " Latex
 "Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Plugin 'lervag/vim-latex'
 
 call vundle#end()
 filetype plugin indent on
@@ -71,6 +72,7 @@ set shell=/bin/bash
 set nowrap
 set autoindent
 set expandtab
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set number
@@ -88,12 +90,19 @@ set notimeout
 set ttimeout
 set ttimeoutlen=100
 
+let mapleader = ","
+
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 nnoremap <leader><leader> <c-^>
 
-let mapleader = ","
-
 "nnoremap <f2> :NERDTreeToggle<cr>
 "let NERDTreeIgnore=['\~$']
+
+"vim-latex specific conf
+let g:latex_fold_enabled = 0
+"let g:latex_viewer = 'gopen'
+"let g:latex_quickfix_autojump = 1
+
+let  g:C_UseTool_cmake = 'yes' 
 
