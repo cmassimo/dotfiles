@@ -12,7 +12,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'benmills/vimux'
 "Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
@@ -96,9 +96,6 @@ nnoremap <C-l> gt
 nnoremap <C-h> gT
 nnoremap <leader><leader> <c-^>
 
-"nnoremap <f2> :NERDTreeToggle<cr>
-"let NERDTreeIgnore=['\~$']
-
 "vim-latex specific conf
 let g:latex_fold_enabled = 0
 "let g:latex_viewer = 'gopen'
@@ -106,3 +103,11 @@ let g:latex_fold_enabled = 0
 
 let  g:C_UseTool_cmake = 'yes' 
 
+" Plugin specific {
+
+    " The-NERD-Tree {
+        nnoremap <f2> :NERDTreeToggle<cr>
+        let NERDTreeIgnore=['\~$']
+    " }
+
+ " }
