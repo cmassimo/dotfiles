@@ -13,9 +13,23 @@ Plugin 'ervandew/supertab'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'benmills/vimux'
+Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+
+" Clojure
+Plugin 'fwolanski/vim-clojure-conceal' , {'for': 'clojure'}     " Fancy unicode symbols for Clojure
+Plugin 'guns/vim-clojure-highlight'    , {'for': 'clojure'}     " Improved syntax highlighting
+Plugin 'guns/vim-clojure-static'       , {'for': 'clojure'}     " Clojure syntax, basic indentation
+Plugin 'vim-scripts/paredit.vim'       , {'for': 'clojure'}     " Easy parens management
+
+Plugin 'tpope/vim-leiningen'
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fireplace'           , {'for': 'clojure'}     " Evaluate code in a background repl
 
 " Ruby/Rails specific plugins
 Plugin 'kchmck/vim-coffee-script'
@@ -23,10 +37,15 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-bundler'
+Plugin 'wavded/vim-stylus'
 
 " Latex
 "Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 Plugin 'lervag/vim-latex'
+
+" Python specific plugins
+Plugin 'jpalardy/vim-slime'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -111,3 +130,12 @@ let  g:C_UseTool_cmake = 'yes'
     " }
 
  " }
+
+" rainbow_parenthesis { 
+    au VimEnter * RainbowParenthesesToggle 
+    au Syntax * RainbowParenthesesLoadRound 
+    au Syntax * RainbowParenthesesLoadSquare
+    au Syntax * RainbowParenthesesLoadBraces
+" }
+
+let g:slime_target = "tmux"
