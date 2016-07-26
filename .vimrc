@@ -19,17 +19,18 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'fholgado/minibufexpl.vim'
 
 " Clojure
-Plugin 'fwolanski/vim-clojure-conceal' , {'for': 'clojure'}     " Fancy unicode symbols for Clojure
-Plugin 'guns/vim-clojure-highlight'    , {'for': 'clojure'}     " Improved syntax highlighting
-Plugin 'guns/vim-clojure-static'       , {'for': 'clojure'}     " Clojure syntax, basic indentation
-Plugin 'vim-scripts/paredit.vim'       , {'for': 'clojure'}     " Easy parens management
+" Plugin 'fwolanski/vim-clojure-conceal' , {'for': 'clojure'}     " Fancy unicode symbols for Clojure
+" Plugin 'guns/vim-clojure-highlight'    , {'for': 'clojure'}     " Improved syntax highlighting
+" Plugin 'guns/vim-clojure-static'       , {'for': 'clojure'}     " Clojure syntax, basic indentation
+" Plugin 'vim-scripts/paredit.vim'       , {'for': 'clojure'}     " Easy parens management
 
-Plugin 'tpope/vim-leiningen'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fireplace'           , {'for': 'clojure'}     " Evaluate code in a background repl
+" Plugin 'tpope/vim-leiningen'
+" Plugin 'tpope/vim-projectionist'
+" Plugin 'tpope/vim-dispatch'
+" Plugin 'tpope/vim-fireplace'           , {'for': 'clojure'}     " Evaluate code in a background repl
 
 " Ruby/Rails specific plugins
 Plugin 'kchmck/vim-coffee-script'
@@ -109,10 +110,13 @@ set notimeout
 set ttimeout
 set ttimeoutlen=100
 
+set colorcolumn=80
+set hidden
+
 let mapleader = ","
 
-nnoremap <C-l> gt
-nnoremap <C-h> gT
+nnoremap <leader>l gt
+nnoremap <leader>h gT
 nnoremap <leader><leader> <c-^>
 
 "vim-latex specific conf
@@ -139,3 +143,11 @@ let  g:C_UseTool_cmake = 'yes'
 " }
 
 let g:slime_target = "tmux"
+let g:slime_paste_file =  tempname()
+let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
+let g:slime_python_ipython = 1
+
+" latex plugin conf
+
+let g:tex_fast= ""
+let g:tex_no_error=1
