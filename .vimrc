@@ -8,6 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Vim enhancements
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 "Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'mileszs/ack.vim'
@@ -20,6 +21,14 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'jceb/vim-hier'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tikhomirov/vim-glsl'
+
+" Scala
+Plugin 'derekwyatt/vim-scala'
+"Plugin 'ktvoelker/sbt-vim'
 
 " Clojure
 " Plugin 'fwolanski/vim-clojure-conceal' , {'for': 'clojure'}     " Fancy unicode symbols for Clojure
@@ -33,12 +42,12 @@ Plugin 'fholgado/minibufexpl.vim'
 " Plugin 'tpope/vim-fireplace'           , {'for': 'clojure'}     " Evaluate code in a background repl
 
 " Ruby/Rails specific plugins
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-bundler'
-Plugin 'wavded/vim-stylus'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-haml'
+" Plugin 'tpope/vim-bundler'
+" Plugin 'wavded/vim-stylus'
 
 " Latex
 "Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
