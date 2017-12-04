@@ -6,6 +6,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'jpo/vim-railscasts-theme'
+
 " Vim enhancements
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
