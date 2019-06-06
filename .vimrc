@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'jpo/vim-railscasts-theme'
+Plugin 'dracula/vim'
 
 " Vim enhancements
 Plugin 'tpope/vim-fugitive'
@@ -25,8 +26,10 @@ Plugin 'xolox/vim-easytags'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'jceb/vim-hier'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tikhomirov/vim-glsl'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'tikhomirov/vim-glsl'
+
+"Plugin 'vim-scripts/Vim-R-plugin'
 
 " Scala
 Plugin 'derekwyatt/vim-scala'
@@ -96,7 +99,8 @@ set noswapfile
 set t_Co=256
 
 "colorscheme jellybeans
-colorscheme railscasts
+"colorscheme railscasts
+colorscheme dracula
 
 set shell=/bin/bash
 
@@ -162,3 +166,6 @@ let g:slime_python_ipython = 1
 
 let g:tex_fast= ""
 let g:tex_no_error=1
+
+nnoremap k gk
+nnoremap j gj
